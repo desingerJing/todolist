@@ -1,0 +1,54 @@
+$main-color: #333 !default;    //主內容色
+
+$font-color-dark: #ebf2fa !default;  // 這六個為表格背景，各區border色 及 各種小地方共用顏色區 
+$font-color-dark1: #a7a6cf !default;
+$font-color-dark2: #b6cdbf !default;
+$font-color-light: #e0ceaa !default; 
+$font-color-light2: #d3d3d3 !default;
+$font-color-light3: #cccccc !default;
+
+$bg-color: #FFD370 !default;
+$hover-color: #000 !default; 
+$link-color: #424b54 !default;
+$active-color: #de9c00 !default;;
+$header-color: #424B54 !default; //h1
+
+$title-color: #424B54 !default; //內容區標題色
+$title-color-dark: #424B54 !default; //內容區其他標題色
+
+$main-size: 14px;   // 版面主要字體尺寸
+$text-size: 16px;   // 閱讀區字體尺寸   (部分版面字體設計較大，但news, company等大量文字區，字體不宜過大時用的尺寸)
+$index-ti-size: 40px;   //首頁各區塊標題
+$header-size: 24px;   //h1尺寸
+
+
+$btn-default-link-color: #FFFFFF !default;
+$btn-default-hover-color: #424B54 !default;
+$btn-default-disabled-color: #cccccc !default;
+
+$btn-primary-link-color: #333333 !default;
+$btn-primary-hover-color: #586471 !default; 
+$btn-primary-disabled-color: #929aa3 !default;
+
+$btn-success-link-color: #8b97a4 !default;
+$btn-success-hover-color: #a8b1ba !default;
+$btn-success-disabled-color: #c6ccd2 !default;
+
+$btn-info-link-color: #6f7e8d !default;
+$btn-info-hover-color: #8b97a4 !default; 
+$btn-info-disabled-color: #b3bbc4 !default;
+
+$btn-warning-link-color: #de9c00 !default;
+$btn-warning-hover-color: #ffc845 !default; 
+$btn-warning-disabled-color: #ffdb86 !default;
+
+$btn-danger-link-color: #f4442e !default;
+$btn-danger-hover-color: #de5544 !default; 
+$btn-danger-disabled-color: #ea9085 !default;
+
+$btn-link-link-color: #424b54 !default;
+$btn-link-hover-color: #de9c00 !default; 
+$btn-link-disabled-color: #6f7e8d !default;
+
+$default-font-family: 'Noto Sans TC', sans-serif, "微軟正黑體", \5FAE\8EDF\6B63\9ED1\9AD4, "Microsoft JhengHei", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
+$default-font-family2: 'Baloo Thambi 2', "微軟正黑體", \5FAE\8EDF\6B63\9ED1\9AD4, "Microsoft JhengHei", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;

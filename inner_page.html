@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList 內頁</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css"
+        integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body class="inner-page">
+    <div id="container">
+        <header>
+            <div class="wrap">
+                <div class="header-logo">
+                    <a href="#"><img src="images/logo.svg" alt="TodoList logo"> ONLINE TODO LIST</a>
+                </div>
+                <div class="header-account">
+                    <div class="header-account--name">
+                        王小明的代辦
+                    </div>
+                    <div class="header-account--logout">
+                        <a href="#">登出</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="middle-content">
+            <div class="wrap">
+                <div class="page-content">
+                    <div class="add-list">
+                        <label class="visually-hidden" for="autoSizingInputGroup">新增待辦事項</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="新增待辦事項">
+                            <button type="submit" class="btn btn-primary"> </button>
+                        </div>
+                    </div>
+        
+                    <div class="list-content">
+                        <div class="list-bookmark">
+                            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                                        type="button" role="tab" aria-controls="all" aria-selected="true">全部</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending"
+                                        type="button" role="tab" aria-controls="pending" aria-selected="false">待完成</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="done-tab" data-bs-toggle="tab" data-bs-target="#done"
+                                        type="button" role="tab" aria-controls="done" aria-selected="false">已完成</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list-items tab-content">
+        
+                            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                                <div class="card card-body">
+                                    <div class="check-list">
+                                        <form>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                                <label class="form-check-label" for="gridCheck1">
+                                                    把冰箱發霉的檸檬拿去丟
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck6"
+                                                    checked="checked">
+                                                <label class="form-check-label" for="gridCheck6">
+                                                    打電話叫媽媽匯款給我
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                                <label class="form-check-label" for="gridCheck2">
+                                                    整理電腦資料夾
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck3"
+                                                    checked="checked">
+                                                <label class="form-check-label" for="gridCheck3">
+                                                    繳電費水費瓦斯費
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck4">
+                                                <label class="form-check-label" for="gridCheck4">
+                                                    約vicky禮拜三泡溫泉
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck5">
+                                                <label class="form-check-label" for="gridCheck5">
+                                                    約ada禮拜四吃晚餐
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card card-footer">
+                                    <div class="list-state">
+                                        <div class="quantity-state">5 個待完成項目</div>
+                                        <div class="list-clear"><a href="#">清除已完成項目</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+                                <div class="card card-body">
+                                    <div class="check-list">
+                                        <form>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck7">
+                                                <label class="form-check-label" for="gridCheck7">
+                                                    把冰箱發霉的檸檬拿去丟
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                                <button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck8">
+                                                <label class="form-check-label" for="gridCheck8">
+                                                    整理電腦資料夾
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck9">
+                                                <label class="form-check-label" for="gridCheck9">
+                                                    約vicky禮拜三泡溫泉
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck10">
+                                                <label class="form-check-label" for="gridCheck10">
+                                                    約ada禮拜四吃晚餐
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card card-footer">
+                                    <div class="list-state">
+                                        <div class="quantity-state">4 個待完成項目</div>
+                                        <div class="list-clear d-none"><a href="#">清除已完成項目</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="done" role="tabpanel" aria-labelledby="done-tab">
+                                <div class="card card-body">
+                                    <div class="check-list">
+                                        <form>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck11"
+                                                    checked="checked">
+                                                <label class="form-check-label" for="gridCheck11">
+                                                    打電話叫媽媽匯款給我
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck12"
+                                                    checked="checked">
+                                                <label class="form-check-label" for="gridCheck12">
+                                                    繳電費水費瓦斯費
+                                                </label><button type="submit" class="btn btn-danger">X</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card card-footer">
+                                    <div class="list-state">
+                                        <div class="quantity-state">2 個已完成項目</div>
+                                        <div class="list-clear"><a href="#">清除已完成項目</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js"
+        integrity="sha512-ewfXo9Gq53e1q1+WDTjaHAGZ8UvCWq0eXONhwDuIoaH8xz2r96uoAYaQCm1oQhnBfRXrvJztNXFsTloJfgbL5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

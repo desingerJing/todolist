@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList 註冊帳號</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css"
+        integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body class="register-page">
+    <div id="container">
+        <header>
+            <div class="wrap">
+                <div class="header-logo">
+                    <a href="#"><img src="images/logo.svg" alt="TodoList logo"> ONLINE TODO LIST</a>
+                </div>
+                <div class="header-account">
+                    <div class="header-account--name">
+                        王小明的代辦
+                    </div>
+                    <div class="header-account--logout">
+                        <a href="#">登出</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="middle-content">
+            <div class="wrap">
+                <div class="login-content">
+                    <div class="login-content--info">
+                        <div class="login-content--logo">
+                            <a href="#"><img src="images/logo.svg" alt="TodoList logo"> ONLINE TODO LIST</a>
+                        </div>
+                        <div class="login-content--img">
+                            <img src="images/login.png" alt="login pic">
+                        </div>
+                    </div>
+                    <div class="login-form">
+                        <div class="page-header">
+                            <h1>註冊帳號</h1>
+                        </div>
+                        <form class="needs-validation" novalidate>
+                            <div class="form-wrap">
+                                <label for="InputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="InputEmail1" placeholder="請輸入Email" required>
+                                <div class="invalid-feedback">此欄位不可為空</div>
+                            </div>
+                            <div class="form-wrap">
+                                <label for="Inputnickname" class="form-label">您的暱稱</label>
+                                <input type="text" class="form-control" id="Inputnickname" placeholder="請輸入您的暱稱" required>
+                                <div class="invalid-feedback">此欄位不可為空</div>
+                            </div>
+                            <div class="form-wrap">
+                                <label for="InputPassword1" class="form-label">密碼</label>
+                                <input type="password" class="form-control" id="InputPassword1" placeholder="請輸入密碼" required>
+                                <div class="invalid-feedback">此欄位不可為空</div>
+                            </div>
+                            <div class="form-wrap">
+                                <label for="InputPassword1" class="form-label">再次輸入密碼</label>
+                                <input type="password" class="form-control" id="InputPassword1" placeholder="請再次輸入密碼" required>
+                                <div class="invalid-feedback">此欄位不可為空</div>
+                            </div>
+                            <div class="btn-wrap text-center">
+                                <button type="submit" class="btn btn-primary">註冊帳號</button>
+                            </div>
+                            <div class="more-account-wrap text-center"><a href="#">登入</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js"
+        integrity="sha512-ewfXo9Gq53e1q1+WDTjaHAGZ8UvCWq0eXONhwDuIoaH8xz2r96uoAYaQCm1oQhnBfRXrvJztNXFsTloJfgbL5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+    </script>
+</body>
+</html>

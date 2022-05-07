@@ -1,0 +1,61 @@
+// clearfix
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin clearul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li{
+    padding: 0;
+  }
+}
+
+@mixin absolute_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin full_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// center(flex)
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// float none
+@mixin no-flot {
+  float: none;
+  width: 100%;
+}
+
+//icon png(ie8) svg
+@mixin svg-icon($icon, $widit, $height) {
+  display: inline-block;
+  background-image: url("../images/#{$icon}.png");
+  background-image: none, url("../images/#{$icon}.svg");
+  width: $width;
+  height: $height;
+}
+
+@mixin header_height{
+  height: $header-height;
+  @include laptop-l{
+    height: $header-height - 10px;
+  }
+}

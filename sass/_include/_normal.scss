@@ -1,0 +1,579 @@
+html {
+  -ms-overflow-style: scrollbar;
+}
+
+body {
+    color: $main-color;
+    font-family: $default-font-family;
+    font-size: $main-size;
+    line-height: 1.4em;
+    //預設值 line-height: 1.42857143;
+    background-color: $bg-color;
+    @include tablet{
+        // font-size: $main-size - 2px;
+    }
+    @include mobile-ll {
+        // font-size: $main-size - 4px;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: $link-color;
+        transition: ease .2s;
+
+        &:hover,
+        &:focus {
+
+            color: $hover-color;
+            text-decoration: none !important;
+            outline: none !important;
+        }    
+        &:hover:focus {
+            text-decoration: none !important;
+            outline: none !important;
+        }
+    }
+    :focus {
+        outline: none !important;
+    }
+}
+
+img {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    width: auto\9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $default-font-family;
+}
+
+h2 {
+    word-break: break-all;
+    color: $title-color;
+}
+
+h3,
+h4 {
+    color: $title-color-dark;
+}
+
+p{
+     //預設值 margin: 0 0 10px;
+}
+
+.wrap{
+    width: $wrap-size;
+    max-width: 100%;
+    padding: 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @include wrap-size{
+        padding: 0 20px;
+    }
+    &::after {
+        @extend %clearfix;
+    }
+}
+
+.full_btn{
+    @include full_area;
+}
+
+
+.page-header {
+    border: 0;
+    
+    @include laptop-l{
+        // padding: 0 7vw;
+    }
+    @include laptop-xs{
+        // padding: 0 30px;
+    }
+    @include tablet{
+        // min-height:auto;
+    }
+
+    h1 {
+        font-size: $header-size;
+        font-weight: bold;
+        margin-bottom: 24px;
+        @include tablet {
+            font-size: $header-size - 2px;
+        }
+        @include mobile-xl{
+            font-size: $header-size - 4px;
+        }
+    }
+}
+
+
+
+
+.form-control {
+    font-family: $default-font-family;
+    font-size: $main-size;
+    color: $main-color;
+    &:focus {
+        border-color: #ccc;
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.btn {
+    font-size: 16px;
+    line-height: 1.224em;
+    border-radius: 10px;
+    padding: 12px 48px;
+    //預設值 border-radius: 4px; 
+    //預設值 padding-left: 12px;
+    //預設值 padding-right: 12px;
+    //預設值 height: 34px;
+    min-width: 128px;
+    font-weight: bold;
+    @include tablet {
+        font-size: 14px;
+        min-width: 115px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+.btn-lg {
+    // 預設值padding-left: 16px;
+    // 預設值padding-right: 16px;
+    // 預設值font-size: 18px;
+    // 預設值border-radius: 6px;    
+}
+
+.btn-sm {
+    // 預設值padding-left: 10px;
+    // 預設值padding-right: 10px;
+    // 預設值font-size: 12px;
+    // 預設值border-radius: 3px; 
+}
+
+.btn-default {
+    border-color: $btn-default-link-color;
+    color: $btn-default-link-color;
+    background: transparent;
+}
+
+.btn-default:hover,
+.btn-default.focus,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open>.dropdown-toggle.btn-default {
+    background-color: $btn-default-hover-color;
+    border-color: $btn-default-hover-color;
+    color: #fff;
+}
+
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled.hover,
+.btn-default[disabled].hover,
+fieldset[disabled] .btn-default.hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+    border-color: $btn-default-disabled-color;
+    background: transparent;
+    color: $btn-default-disabled-color;
+
+}
+
+.btn-primary {
+    background-color: $btn-primary-link-color;
+    border-color: $btn-primary-link-color;
+}
+
+.btn-primary:hover,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary {
+    background-color: $btn-primary-hover-color;
+    border-color: $btn-primary-hover-color;
+
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled.hover,
+.btn-primary[disabled].hover,
+fieldset[disabled] .btn-primary.hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: $btn-primary-disabled-color;
+    border-color: $btn-primary-disabled-color;
+}
+
+.btn-success {
+    background-color: $btn-success-link-color;
+    border-color: $btn-success-link-color;
+}
+
+.btn-success:hover,
+.btn-success.focus,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success:active:focus,
+.btn-success:active:hover,
+.open>.dropdown-toggle.btn-success {
+    background-color: $btn-success-hover-color;
+    border-color: $btn-success-hover-color;
+}
+
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled.hover,
+.btn-success[disabled].hover,
+fieldset[disabled] .btn-success.hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+    background-color: $btn-success-disabled-color;
+    border-color: $btn-success-disabled-color;
+}
+
+.btn-info {
+    background-color: $btn-info-link-color;
+    border-color: $btn-info-link-color;
+}
+
+.btn-info:hover,
+.btn-info.focus,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info:active:focus,
+.btn-info:active:hover,
+.open>.dropdown-toggle.btn-info {
+    background-color: $btn-info-hover-color;
+    border-color: $btn-info-hover-color;
+}
+
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled.hover,
+.btn-info[disabled].hover,
+fieldset[disabled] .btn-info.hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+    background-color: $btn-info-disabled-color;
+    border-color: $btn-info-disabled-color;
+}
+
+.btn-warning {
+    background-color: $btn-warning-link-color;
+    border-color: $btn-warning-link-color;
+}
+
+.btn-warning:hover,
+.btn-warning.focus,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning:active:focus,
+.btn-warning:active:hover,
+.open>.dropdown-toggle.btn-warning {
+    background-color: $btn-warning-hover-color;
+    border-color: $btn-warning-hover-color;
+}
+
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled.focus,
+.btn-warning[disabled].focus,
+fieldset[disabled] .btn-warning.focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+    background-color: $btn-warning-disabled-color;
+    border-color: $btn-warning-disabled-color;
+}
+
+.btn-danger {
+    background-color: $btn-danger-link-color;
+    border-color: $btn-danger-link-color;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger.focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger:active:focus,
+.btn-danger:active:hover,
+.open>.dropdown-toggle.btn-danger {
+    background-color: $btn-danger-hover-color;
+    border-color: $btn-danger-hover-color;
+}
+
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+    background-color: $btn-danger-disabled-color;
+    border-color: $btn-danger-disabled-color;
+}
+
+.btn-link {
+    color: $btn-link-link-color;
+}
+
+.btn-link:hover,
+.btn-link:focus{
+    color: $btn-link-hover-color;
+}
+
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:focus {
+    color: $btn-link-disabled-color;
+}
+
+.input-group-btn{
+    .btn-default{
+        border-color: #ccc;
+    }
+}
+
+.alert {
+    // 預設值 padding: 15px;
+    // 預設值 margin-bottom: 20px;
+    // 預設值 border: 1px solid transparent;
+    // 預設值 border-radius: 4px;
+}
+
+.alert-success {
+    color: darken($color: $btn-success-link-color, $amount: 30);
+    background-color: lighten($color: $btn-success-link-color, $amount: 30);
+    border-color: lighten($color: $btn-success-link-color, $amount: 15);
+}
+
+.alert-info {
+    color: darken($color: $btn-info-link-color, $amount: 30);
+    background-color: lighten($color: $btn-info-link-color, $amount: 40);
+    border-color: lighten($color: $btn-info-link-color, $amount: 30);
+}
+
+.alert-warning {
+    color: darken($color: $btn-warning-link-color, $amount: 30);
+    background-color: lighten($color: $btn-warning-link-color, $amount: 20);
+    border-color: lighten($color: $btn-warning-link-color, $amount: 15);
+}
+
+.alert-danger {
+    color: darken($color: $btn-danger-link-color, $amount: 30);
+    background-color: lighten($color: $btn-danger-link-color, $amount: 20);
+    border-color: lighten($color: $btn-danger-link-color, $amount: 15);
+}
+
+.panel-default {
+    border-color: $btn-default-disabled-color;
+    &>.panel-heading {
+        background: $btn-default-disabled-color;
+        border-color: $btn-default-disabled-color;
+        color: darken($color: $btn-default-hover-color, $amount: 20);
+    }
+}
+
+.panel-primary {
+    border-color: $btn-primary-disabled-color;
+
+    &>.panel-heading {
+        background-color: $btn-primary-disabled-color;
+        border-color: $btn-primary-disabled-color;
+    }
+}
+
+.panel-success {
+    border-color: $btn-success-disabled-color;
+
+    &.panel-success>.panel-heading {
+        color: darken($color: $btn-success-hover-color, $amount: 20);
+        background-color: $btn-success-disabled-color;
+        border-color: $btn-success-disabled-color;
+    }
+}
+
+.panel-info {
+    border-color: $btn-info-disabled-color;
+
+    &.panel-info>.panel-heading {
+        color: darken($color: $btn-info-hover-color, $amount: 20);
+        background-color: $btn-info-disabled-color;
+        border-color: $btn-info-disabled-color;
+    }
+}
+
+.panel-warning {
+    border-color: $btn-warning-disabled-color;
+
+    &.panel-warning>.panel-heading {
+        color: darken($color: $btn-warning-hover-color, $amount: 20);
+        background-color: $btn-warning-disabled-color;
+        border-color: $btn-warning-disabled-color;
+       
+    }
+}
+
+.panel-danger {
+    border-color: $btn-danger-disabled-color;
+
+    .panel-danger>.panel-heading {
+        color: darken($color: $btn-danger-link-color, $amount: 20);
+        background-color: $btn-danger-disabled-color;
+        border-color: $btn-danger-disabled-color;
+    }
+}
+
+.pagination {
+    //預設值 border-radius: 4px;  
+    >li {
+
+        >a,
+        >span {
+            color: $link-color;
+            border-color: lighten($color: $main-color, $amount: 50);
+
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: $hover-color;
+            }
+        }
+    }
+
+    >.active>a,
+    >.active>span {
+
+        &,
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $active-color;
+            border-color: $active-color;
+        }
+    }
+
+    >.disabled {
+
+        >span,
+        >span:hover,
+        >span:focus,
+        >a,
+        >a:hover,
+        >a:focus {
+            color: lighten($color: $main-color, $amount: 20);
+        }
+    }
+}
+
+
+.invalid-feedback {
+    color: #D87355;
+    font-size: 14px;
+    font-weight: bold;
+    @include tablet {
+        font-size: 12px;
+    }
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none;
+}

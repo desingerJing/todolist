@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList 內頁</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css"
+        integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body class="inner-page">
+    <div id="container">
+        <header>
+            <div class="wrap">
+                <div class="header-logo">
+                    <a href="#"><img src="images/logo.svg" alt="TodoList logo"> ONLINE TODO LIST</a>
+                </div>
+                <div class="header-account">
+                    <div class="header-account--name">
+                        王小明的代辦
+                    </div>
+                    <div class="header-account--logout">
+                        <a href="#">登出</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="middle-content">
+            <div class="wrap">
+                <div class="page-content">
+                    <div class="add-list">
+                        <label class="visually-hidden" for="autoSizingInputGroup">新增待辦事項</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="新增待辦事項">
+                            <button type="submit" class="btn btn-primary"> </button>
+                        </div>
+                    </div>
+        
+                    <div class="list-content no-data">
+                        <h3 class="text-center">目前尚無待辦事項</h3>
+                        <div class="text-center">
+                            <img src="images/no-list.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js"
+        integrity="sha512-ewfXo9Gq53e1q1+WDTjaHAGZ8UvCWq0eXONhwDuIoaH8xz2r96uoAYaQCm1oQhnBfRXrvJztNXFsTloJfgbL5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
